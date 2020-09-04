@@ -8,7 +8,7 @@ steps {
 }
     stage('build') {
     steps {
-        withMaven(maven : 'mymaven'){
+            (maven : 'mymaven'){
         bat "mvn clean install"
     }
     }
