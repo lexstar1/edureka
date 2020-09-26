@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lexstaredureka 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lexstaredureka
+  template:
+    metadata:
+      labels:
+        app: lexstaredureka 
+    spec:
+      containers:
+        - name: lexstaredureka 
+          image: hydro.azurecr.io/lexstaredureka
+          ports:
+          - containerPort: 9090
